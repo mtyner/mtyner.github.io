@@ -1,0 +1,127 @@
+/* Mercedes Tyner */
+body { background-color: #FFFFFF;
+       color: #000000;
+       font-family: Arial, Helvetica, sans-seri
+}
+header {background-color: rgb(37, 34, 34);
+       color: #FFFFFF;
+       text-align: center;
+}
+nav {  padding: 5px;
+       font-weight: bold;
+       display: block;
+       text-align: center;
+}
+main {padding: 1px 20px 20px 20px;
+       background-color: white;
+       overflow: auto;
+}
+h1 {margin-bottom: 0;
+       font-family: Georgia, 'Times New Roman', Times, serif;
+       letter-spacing: 0.25em;
+       padding-top: 0.5em;
+       padding-bottom: 0.5em;
+}
+h2 {color: rgb(255, 188, 4);
+       font-family: Georgia, 'Times New Roman', Times, serif;
+       text-shadow: 1px 0 0 gray;
+}
+h3 {font-family: Georgia, 'Times New Roman', Times, serif;
+}
+ul {list-style: none;}
+main ul {list-style-image: url(hammer.gif);
+}
+footer {font-size: 75%;
+       font-style: italic;
+       text-align: center;
+       font-family: Georgia, 'Times New Roman', Times, serif;
+       padding: 1em;
+       background-color: white;
+}
+dt {color: rgb(56, 55, 55);}
+table {border: 2px solid black;
+       border-collapse: collapse;
+}
+td, th {padding: 0.5em;
+       border: 2px solid black;
+}
+td {text-align: center;}
+.text {text-align: left;}
+tr:nth-of-type(odd) {background-color: rgb(172, 172, 172);}
+#wrapper {background-image: linear-gradient(rgb(51, 48, 48), gray);
+       background-color: white;
+}
+#homehero {background-image: url('logo.jpg');
+       background-repeat: no-repeat;
+       background-size: 50% 100%;
+       height: 300px;
+       background-color: white;
+       background-position: center;
+}
+#projecthero {background-image: url('room.jpg');
+       background-repeat: no-repeat;
+       background-size: 35% 100%;
+       height: 300px;
+}
+.column1 {flex: 50%;
+}
+.column2 {flex: 50%;
+}
+* {box-sizing: border-box;}
+video, embed { float: right; padding-left: 20px; }
+@media (min-width: 600px) {
+       nav ul {display: flex;
+              flex-direction: row;
+              flex-wrap: nowrap;
+              justify-content: space-around;
+       }
+       nav li {border-bottom: none;}
+       section {padding-left: 2em;
+              padding-right: 2em;
+       }
+       .flow {display: flex;
+              flex-direction: row;
+       }
+}
+@media (min-width: 768px) {
+       nav ul {display: flex;
+              flex-direction: column;
+              flex-wrap: nowrap;
+              justify-content: space-around;
+       }
+       nav li {border-bottom: none;}
+       section {padding-left: 2em;
+              padding-right: 2em;
+       }
+       .flow {display: flex;
+              flex-direction: row;
+       }
+}
+@media (min-width: 1024px) {
+       #wrapper {margin: auto;
+              width: 80%;
+              border: 1px solid black;
+              box-shadow: 3px 3px 3px black;
+       }
+       nav {text-align: left;
+              padding-left: 1em;
+       }
+       @supports (display: grid) {
+              nav ul {flex-direction: column;
+                     padding-top: 1em;
+              }
+              .hero {grid-area: hero;}
+              header {grid-area: header;}
+              nav {grid-area: nav;}
+              main {grid-area: main;}
+              footer {grid-area: footer;}
+              #wrapper { display: grid;
+                     grid-template: "header  header"
+                     "nav  hero"
+                     "nav  main"
+                     "nav  footer"
+                     / 180px 1fr;
+              }
+       }
+}
+       
